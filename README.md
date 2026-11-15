@@ -17,3 +17,10 @@ chmod +x setup.sh backup.sh
 3. Starts Nginx
 4. Creates backup folder
 5. Takes backup with today's date
+
+
+## ✅ Output.
+
+Setup Done!
+Backup Done: backup-15-11-2026.tar.gz
+Tested on Ubuntu WSL - Working
