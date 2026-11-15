@@ -1,13 +1,11 @@
 #!/bin/bash
-# Project 1 - Backup System
+# Backup Script - Project 1
 
-# Take today's date
+mkdir -p ~/backups
+
 DATE=$(date +%d-%m-%Y)
+BACKUP_FILE=~/backups/backup-$DATE.tar.gz
 
-# Make zip of website folder
-tar -czf ~/backups/backup-$DATE.tar.gz /var/www/html
-
-# Delete backups older than 7 days
-find ~/backups -type f -mtime +7 -delete
+tar -czf $BACKUP_FILE /var/www/html
 
 echo "Backup Done: backup-$DATE.tar.gz"
